@@ -5,6 +5,12 @@ resource "aws_subnet" "vpc-A-public-sa-east-1a" {
   cidr_block              = "10.230.1.0/24"
   availability_zone       = "sa-east-1a"
   map_public_ip_on_launch = true
+  tags = {
+    Name     = "vpc-A-public-sa-east-1a"
+    Service  = "VPC"
+    Location = "Sao Paulo"
+    Owner    = "TIQS"
+  }
 }
 
 resource "aws_subnet" "vpc-A-private-sa-east-1a" {
@@ -12,6 +18,14 @@ resource "aws_subnet" "vpc-A-private-sa-east-1a" {
   cidr_block              = "10.230.11.0/24"
   availability_zone       = "sa-east-1a"
   map_public_ip_on_launch = true
+
+  tags = {
+    Name     = "vpc-A-private-sa-east-1a"
+    Service  = "VPC"
+    Location = "Sao Paulo"
+    Owner    = "TIQS"
+  }
+
 }
 
 resource "aws_subnet" "vpc-B-private-sa-east-1b" {
@@ -19,6 +33,13 @@ resource "aws_subnet" "vpc-B-private-sa-east-1b" {
   cidr_block              = "10.231.11.0/24"
   availability_zone       = "sa-east-1b"
   map_public_ip_on_launch = true
+
+  tags = {
+    Name     = "vpc-B-private-sa-east-1b"
+    Service  = "VPC"
+    Location = "Sao Paulo"
+    Owner    = "TIQS"
+  }
 }
 
 resource "aws_subnet" "vpc-C-private-sa-east-1c" {
@@ -26,4 +47,11 @@ resource "aws_subnet" "vpc-C-private-sa-east-1c" {
   cidr_block              = "10.232.11.0/24"
   availability_zone       = "sa-east-1c"
   map_public_ip_on_launch = true
+  
+  tags = {
+    Name     = "vpc-C-private-sa-east-1c"
+    Service  = "VPC"
+    Location = "Sao Paulo"
+    Owner    = "TIQS"
+  }
 }
