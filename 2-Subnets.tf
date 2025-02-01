@@ -47,7 +47,7 @@ resource "aws_subnet" "vpc-C-private-sa-east-1c" {
   cidr_block              = "10.232.11.0/24"
   availability_zone       = "sa-east-1c"
   map_public_ip_on_launch = true
-  
+
   tags = {
     Name     = "vpc-C-private-sa-east-1c"
     Service  = "VPC"

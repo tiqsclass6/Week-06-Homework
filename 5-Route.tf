@@ -41,7 +41,7 @@ resource "aws_route_table" "VPC-C-SaoPaulo-Test-PrivateRT" {
     cidr_block         = "10.0.0.0/8"
     transit_gateway_id = aws_ec2_transit_gateway.Brazil-TGW01.id
   }
-  
+
   tags = {
     Name = "VPC-C-SaoPaulo-Test-PrivateRT"
   }
