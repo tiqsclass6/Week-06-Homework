@@ -1,16 +1,16 @@
-resource "aws_eip" "Brazil-ElasticIP" {
+resource "aws_eip" "NewYork-ElasticIP" {
   # vpc = true
 
   tags = {
-    Name = "Brazil-ElasticIP"
+    Name = "NewYork-ElasticIP"
   }
 }
 
-resource "aws_nat_gateway" "Brazil-Nat-GW" {
-  allocation_id = aws_eip.Brazil-ElasticIP.id
-  subnet_id     = aws_subnet.vpc-A-public-sa-east-1a.id
+resource "aws_nat_gateway" "NewYork-Nat-GW" {
+  allocation_id = aws_eip.NewYork-ElasticIP.id
+  subnet_id     = aws_subnet.vpc-A-public-us-east-1a.id
 
   tags = {
-    Name = "Brazil-Nat-GW"
+    Name = "NewYork-Nat-GW"
   }
 }

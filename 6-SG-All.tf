@@ -1,9 +1,9 @@
 # 7. Create Security Groups to VPCs
 
-resource "aws_security_group" "VPC-B-SaoPaulo-Dev-SG02" {
-  name        = "VPC-B-SaoPaulo-Dev-SG02"
-  description = "VPC-B-SaoPaulo-Dev-SG02"
-  vpc_id      = aws_vpc.VPC-B-SaoPaulo-Dev.id
+resource "aws_security_group" "VPC-B-NewYork-Dev-SG02" {
+  name        = "VPC-B-NewYork-Dev-SG02"
+  description = "VPC-B-NewYork-Dev-SG02"
+  vpc_id      = aws_vpc.VPC-B-NewYork-Dev.id
 
   ingress {
     from_port   = -1
@@ -34,15 +34,15 @@ resource "aws_security_group" "VPC-B-SaoPaulo-Dev-SG02" {
   }
 
   tags = {
-    Name    = "VPC-B-SaoPaulo-Dev"
+    Name    = "VPC-B-NewYork-Dev"
     service = "basiclinux"
   }
 }
 
-resource "aws_security_group" "VPC-A-SaoPaulo-Prod-With-Bastion-01" {
-  name        = "VPC-A-SaoPaulo-Prod-With-Bastion-01"
-  description = "VPC-A-SaoPaulo-Prod-With-Bastion-01"
-  vpc_id      = aws_vpc.VPC-A-SaoPaulo-Prod.id
+resource "aws_security_group" "VPC-A-NewYork-Prod-With-Bastion-01" {
+  name        = "VPC-A-NewYork-Prod-With-Bastion-01"
+  description = "VPC-A-NewYork-Prod-With-Bastion-01"
+  vpc_id      = aws_vpc.VPC-A-NewYork-Prod.id
 
   ingress {
     from_port   = 3389
@@ -59,7 +59,7 @@ resource "aws_security_group" "VPC-A-SaoPaulo-Prod-With-Bastion-01" {
   }
 
   tags = {
-    Name    = "VPC-A-SaoPaulo-Prod-With-Bastion-01"
+    Name    = "VPC-A-NewYork-Prod-With-Bastion-01"
     service = "basicwindows"
   }
 }
