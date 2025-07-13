@@ -8,15 +8,15 @@ pipeline {
             steps {
                 withCredentials([[
                     $class: 'AmazonWebServicesCredentialsBinding',
-                    credentialsId: 'AWS_SECRET_KEY' // Replace with your Jenkins credential ID
+                    credentialsId: 'AWS_SECRET_KEY'
                 ]]) {
-                    sh 'aws sts get-caller-identity' // Test AWS credentials
+                    sh 'aws sts get-caller-identity'
                 }
             }
         }
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/bjett81/Week-6-Homework' // Replace with your Git repository URL
+                git branch: 'main', url: 'https://github.com/bjett81/Week-6-Homework'
             }
         }
         stage('Initialize Terraform') {
